@@ -1,3 +1,13 @@
+This is a fork of libdwarf from:
+
+  git://git.code.sf.net/p/libdwarf/code
+
+There were issues getting it to build in the correct way.  You probably
+want upstream.
+
+-tom
+(Original README follows below)
+
 To just build libdwarf and dwarfdump one might do:
     ./configure
     make dd
