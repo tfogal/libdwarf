@@ -53,7 +53,6 @@
 */
 
 const char *_dwarf_errmsgs[] = {
-
     "No error (0)\n",
     "DW_DLE_VMM 1 dwarf format/library version mismatch",
     "DW_DLE_MAP 2 memory map failure",

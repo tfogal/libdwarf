@@ -35,9 +35,7 @@
   http://oss.sgi.com/projects/GenInfo/NoticeExplan
 
 */
-
-
-
+#include <stdio.h>
 #include "config.h"
 #include "dwarf_incl.h"
 #include "dwarf_die_deliv.h"
@@ -578,13 +576,13 @@ dwarf_formaddr(Dwarf_Attribute attr,
             it is a reference inside the debug_info section. No longer
             allowed. */
         ) {
-
         READ_UNALIGNED(dbg, ret_addr, Dwarf_Addr,
             attr->ar_debug_ptr,
             cu_context->cc_address_size);
         *return_addr = ret_addr;
         return (DW_DLV_OK);
     }
+    fprintf(stderr, "[dwarf] bad attrform is: %hu\n", attr->ar_attribute_form);
 
     _dwarf_error(dbg, error, DW_DLE_ATTR_FORM_BAD);
     return (DW_DLV_ERROR);
