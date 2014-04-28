@@ -1,0 +1,5 @@
+dwarf_names.[ch]
+dwarf_names_enum.h
+dwarf_names_new.h
+libdwarf.h
+gennames
