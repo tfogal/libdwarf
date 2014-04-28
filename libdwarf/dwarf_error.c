@@ -415,7 +415,9 @@ dwarf_errmsg(Dwarf_Error error)
 
     if (error->er_errval >=
         (Dwarf_Signed)(sizeof(_dwarf_errmsgs) / sizeof(char *))) {
-        return "Dwarf_Error value out of range";
+        return "Dwarf_Error value is out of range (should not happen)!  "
+               "This means there is either a bug in libdwarf, or the "
+               "Dwarf_Error was never initialized.";
     }
 
     return ((char *) _dwarf_errmsgs[error->er_errval]);
