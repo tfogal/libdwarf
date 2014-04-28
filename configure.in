@@ -29,28 +29,28 @@ then
 fi
 }
 
-cd libdwarf 
+cd libdwarf
 echo "configuring libdwarf $shrd  "
-./configure  "$shrd" 
+./configure  "$shrd"
 chckres $? "libdwarf configure failed"
 echo "done configuring libdwarf $shrd "
 cd ..
 
-cd dwarfdump 
+cd dwarfdump
 echo "configuring dwarfdump"
 ./configure
 chckres $? "dwarfdump configure failed"
 echo "done configuring dwarfdump"
 cd ..
 
-cd dwarfdump2 
+cd dwarfdump2
 echo "configuring dwarfdump2"
 ./configure
 chckres $? "dwarfdump2 configure failed"
 echo "done  dwarfdump2"
 cd ..
 
-cd dwarfgen 
+cd dwarfgen
 echo "configuring dwarfgen"
 ./configure
 chckres $? "dwarfgen configure failed"
